@@ -1,114 +1,138 @@
+/* ======== GENERAL PAGE STYLES ======== */
 body {
-    font-family: 'Poppins', sans-serif;
-    background: linear-gradient(135deg, #1e3c72, #2a5298);
-    color: #fff;
-    height: 100vh;
     margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #f5f1eb, #e4d5c3);
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 }
 
 .wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     width: 100%;
+    max-width: 900px;
+    padding: 30px;
 }
 
 .container {
-    width: 90%;
-    max-width: 800px;
-    background: rgba(255, 255, 255, 0.1);
+    background: #fff;
     border-radius: 20px;
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.1);
     padding: 40px;
-    backdrop-filter: blur(15px);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
     text-align: center;
 }
 
 h1 {
-    font-weight: 600;
-    margin-bottom: 10px;
+    font-size: 2rem;
+    color: #3a2f27;
+    margin-bottom: 5px;
 }
 
 p {
-    color: #dcdcdc;
-    margin-bottom: 30px;
+    color: #7a6c5d;
+    margin-bottom: 25px;
 }
 
+/* ======== FORM STYLING ======== */
 .form-card {
     display: flex;
     flex-direction: column;
     gap: 15px;
+    align-items: center;
 }
 
 .input-row {
     display: flex;
     gap: 15px;
+    width: 100%;
+    justify-content: center;
 }
 
 input {
-    flex: 1;
-    padding: 12px;
-    border: none;
+    padding: 12px 15px;
     border-radius: 10px;
-    font-size: 16px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    width: 45%;
+    transition: all 0.3s ease;
+}
+
+input:focus {
+    border-color: #8f7455;
+    box-shadow: 0 0 5px #d2b48c;
     outline: none;
 }
 
 button {
-    padding: 12px;
-    border: none;
-    border-radius: 10px;
-    background: linear-gradient(45deg, #00d2ff, #3a7bd5);
+    background: #8f7455;
     color: white;
-    font-size: 18px;
-    font-weight: 600;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 12px;
+    font-size: 1rem;
     cursor: pointer;
-    transition: 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 button:hover {
-    transform: scale(1.05);
+    background: #725d45;
 }
 
-.result-card {
-    background: rgba(255,255,255,0.15);
-    border-radius: 12px;
-    padding: 20px;
-    margin-top: 30px;
+/* ======== RESULT CARD ======== */
+.result-container {
+    margin-top: 40px;
+}
+
+.itinerary-card {
+    background: #f9f6f1;
+    border-radius: 18px;
+    padding: 30px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
     text-align: left;
 }
 
-pre {
-    background: rgba(0,0,0,0.3);
-    padding: 20px;
-    border-radius: 10px;
-    white-space: pre-wrap;
-    color: #e4e4e4;
-    font-size: 15px;
-}
-.result-output table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 15px;
-    color: #fff;
-    background: rgba(0,0,0,0.25);
+.itinerary-card h2 {
+    text-align: center;
+    color: #3a2f27;
+    margin-bottom: 20px;
 }
 
-.result-output th, .result-output td {
-    border: 1px solid rgba(255,255,255,0.3);
-    padding: 8px 12px;
+/* ======== ITINERARY TABLE STYLING ======== */
+.itinerary-output table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.itinerary-output th, .itinerary-output td {
+    border: 1px solid #ddd;
+    padding: 10px;
     text-align: center;
 }
 
-.result-output th {
-    background: rgba(255,255,255,0.15);
+.itinerary-output th {
+    background-color: #8f7455;
+    color: white;
     font-weight: 600;
 }
 
-.result-output tr:hover {
-    background: rgba(255,255,255,0.1);
+.itinerary-output tr:nth-child(even) {
+    background-color: #f3eee8;
 }
 
+.itinerary-output tr:hover {
+    background-color: #e8dfd4;
+    transition: 0.3s;
+}
+
+/* ======== RESPONSIVE DESIGN ======== */
+@media (max-width: 700px) {
+    input {
+        width: 100%;
+    }
+    .input-row {
+        flex-direction: column;
+    }
+}
