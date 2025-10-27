@@ -1,0 +1,114 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    color: #fff;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.container {
+    width: 90%;
+    max-width: 800px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 40px;
+    backdrop-filter: blur(15px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+h1 {
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+p {
+    color: #dcdcdc;
+    margin-bottom: 30px;
+}
+
+.form-card {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.input-row {
+    display: flex;
+    gap: 15px;
+}
+
+input {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    outline: none;
+}
+
+button {
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(45deg, #00d2ff, #3a7bd5);
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+.result-card {
+    background: rgba(255,255,255,0.15);
+    border-radius: 12px;
+    padding: 20px;
+    margin-top: 30px;
+    text-align: left;
+}
+
+pre {
+    background: rgba(0,0,0,0.3);
+    padding: 20px;
+    border-radius: 10px;
+    white-space: pre-wrap;
+    color: #e4e4e4;
+    font-size: 15px;
+}
+.result-output table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    color: #fff;
+    background: rgba(0,0,0,0.25);
+}
+
+.result-output th, .result-output td {
+    border: 1px solid rgba(255,255,255,0.3);
+    padding: 8px 12px;
+    text-align: center;
+}
+
+.result-output th {
+    background: rgba(255,255,255,0.15);
+    font-weight: 600;
+}
+
+.result-output tr:hover {
+    background: rgba(255,255,255,0.1);
+}
+

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Planner</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <h1>🌍 Smart Travel Expense Planner</h1>
+            <p>Plan your entire trip — from budget to itinerary — in one click!</p>
+
+            <form method="POST" action="/get_itinerary" class="form-card">
+                <div class="input-row">
+                    <input type="text" name="from_city" placeholder="From (City)" required>
+                    <input type="text" name="to_city" placeholder="To (Destination)" required>
+                </div>
+
+                <div class="input-row">
+                    <input type="number" name="travellers" placeholder="Number of Travellers" min="1" required>
+                    <input type="number" name="budget" placeholder="Total Budget (₹)" min="1" required>
+                </div>
+
+                <input type="number" name="days" placeholder="Number of Days" min="1" required>
+
+                <button type="submit">Generate Itinerary ✈️</button>
+            </form>
+
+            {% if result %}
+            <div class="result-container">
+                <div class="itinerary-box">
+                    <h2>Generated Itinerary</h2>
+                    <div class="itinerary-output">
+                        {{ result|safe }}
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>
